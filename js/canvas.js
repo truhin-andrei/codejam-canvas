@@ -45,5 +45,15 @@ fetch('./assets/json/32x32.json')
       });
     });  
   }));
+
+  picture.addEventListener('click', () =>
+fetch('./assets/img/image.png')
+  .then(function(response) {  
+    return response.blob();  
+  }) 
+  .then(createImageBitmap) 
+  .then(function(image) {
+    context.drawImage(image, 0, 0, canvas.width, canvas.height); 
+  }));
   
 
