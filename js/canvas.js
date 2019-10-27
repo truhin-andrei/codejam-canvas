@@ -3,6 +3,7 @@ let context = canvas.getContext("2d");
 let matrix;
 let four = document.getElementById('four');
 let thirty_two = document.getElementById('thirty_two');
+let picture = document.getElementById('picture');
 
 four.addEventListener('click', () =>
 fetch('./assets/json/4x4.json')
