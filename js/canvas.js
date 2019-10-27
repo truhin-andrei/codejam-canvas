@@ -1,6 +1,8 @@
 let canvas  = document.getElementById("canvas");
 let context = canvas.getContext("2d");
 let matrix;
+let four = document.getElementById('four');
+four.addEventListener('click', () =>
 fetch('./assets/json/4x4.json')
   .then(function(response) {  
     return response.json();  
@@ -16,11 +18,10 @@ fetch('./assets/json/4x4.json')
       row.forEach((col, k) => {
         context.fillStyle =`#${col}`;
         context.fillRect(dx, dy, width, height);
-        dx += width;
-        
+        dx += width;  
       });
     });  
-  });
+  }));
 
   
 
